@@ -1,0 +1,408 @@
+Board: Jasper
+SmcCode size : 12288 (0x3000)
+SmcExploit   : 13 records, 582 bytes
+Injected code: 0x2d74..0x2f2a (438 bytes)
+
+Patch list (address, length, new bytes, LJMP target):
+  [ 0] 0x0770 len=3    new=122e61 old=122624
+  [ 1] 0x07d4 len=6    new=122e67122e6d old=120ea9121a3a
+  [ 2] 0x0b73 len=3    new=022d74 -> LJMP 0x2d74 old=753d01
+  [ 3] 0x0ae3 len=3    new=022d83 -> LJMP 0x2d83 old=020bf4
+  [ 4] 0x08c2 len=3    new=022da6 -> LJMP 0x2da6 old=d21322
+  [ 5] 0x0b2e len=3    new=022deb -> LJMP 0x2deb old=b49f03
+  [ 6] 0x25e0 len=3    new=022e73 -> LJMP 0x2e73 old=85f353
+  [ 7] 0x1e9f len=3    new=022e53 -> LJMP 0x2e53 old=021f38
+  [ 8] 0x11ac len=3    new=022ead -> LJMP 0x2ead old=021156
+  [ 9] 0x07c2 len=3    new=000000 old=121408
+  [10] 0x082b len=3    new=000000 old=753c80
+  [11] 0x0814 len=4    new=78307a39 old=78357a34
+  [12] 0x2d74 len=438  new=753d01533ce730e203433c18020b93e53c20e41b433c10e563b41107e53c30e302800ce53c30e007433c0278307600020bf4301308e53c30e103022f18e53c30e30474018002740012246ce53c12246c7831e612246c08e612246c08e612246ce5e312246ce5e412246ce5e512246ce5e612246cd21322b49f03020d3bb4a05e740112244512244ab4010b533c19433c207830760022b40204533c1922b40308433c047830760022b40404533c1922b4062ce53c30e027e5ee20e0fbe5eef5ee75ea00783186eb0886ec0886ede5e344c0f5e3e5e454fc4402f5e475f50622533c011225f85003433c08021f38753c00022624120ea9022ef2121a3a022ec585f353533cfe75eb0175ea1075f500e5f1b45825e5f2b44220e5f3b4501be5f4b4501675eb0175ea1875f5007831a6f308a6f208a6f1433c0122533c01e5ee30e00d75e30175e30075e30175e30022021156e53c30e127e5ee20e022e5eef5ee75ea00783186eb0886ec0886ede5e344c0f5e3e5e454fc4402f5e475f50622e53c20e1055424701322783006e6b40014e53c2440f53c30e70b800a783006e6b41e02800122533c09d214c215c216753d01756400c21322 old=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+=== injected code @ 0x2d74 ===
+0x2D74: 75 3d 01   mov 0x3d, #0x01                          ?
+0x2D77: 53 3c e7   anl 0x3c, #0xe7                          ?
+0x2D7A: 30 e2 03   jnb 0xe0.2 [0xe2], 0x000c                ?
+0x2D7D: 43 3c 18   orl 0x3c, #0x18                          ?
+0x2D80: 02 0b 93   ljmp 0x0b93                              ?
+0x2D83: e5 3c      mov A, 0x3c                              ?
+0x2D85: 20 e4 1b   jb 0xe0.4 [0xe4], 0x002f                 ?
+0x2D88: 43 3c 10   orl 0x3c, #0x10                          ?
+0x2D8B: e5 63      mov A, 0x63                              ?
+0x2D8D: b4 11 07   cjne A, #0x11, 0x0023                    ?
+0x2D90: e5 3c      mov A, 0x3c                              ?
+0x2D92: 30 e3 02   jnb 0xe0.3 [0xe3], 0x0023                ?
+0x2D95: 80 0c      sjmp 0x002f                              ?
+0x2D97: e5 3c      mov A, 0x3c                              ?
+0x2D99: 30 e0 07   jnb 0xe0.0 [0xe0], 0x002f                ?
+0x2D9C: 43 3c 02   orl 0x3c, #0x02                          ?
+0x2D9F: 78 30      mov R0, #0x30                            ?
+0x2DA1: 76 00      mov @R0, #0x00                           ?
+0x2DA3: 02 0b f4   ljmp 0x0bf4                              ?
+0x2DA6: 30 13 08   jnb 0x22.3 [0x13], 0x003d                ?
+0x2DA9: e5 3c      mov A, 0x3c                              ?
+0x2DAB: 30 e1 03   jnb 0xe0.1 [0xe1], 0x003d                ?
+0x2DAE: 02 2f 18   ljmp 0x2f18                              ?
+0x2DB1: e5 3c      mov A, 0x3c                              ?
+0x2DB3: 30 e3 04   jnb 0xe0.3 [0xe3], 0x0046                ?
+0x2DB6: 74 01      mov A, #0x01                             ?
+0x2DB8: 80 02      sjmp 0x0048                              ?
+0x2DBA: 74 00      mov A, #0x00                             ?
+0x2DBC: 12 24 6c   lcall 0x246c                             ?
+0x2DBF: e5 3c      mov A, 0x3c                              ?
+0x2DC1: 12 24 6c   lcall 0x246c                             ?
+0x2DC4: 78 31      mov R0, #0x31                            ?
+0x2DC6: e6         mov A, @R0                               ?
+0x2DC7: 12 24 6c   lcall 0x246c                             ?
+0x2DCA: 08         inc R0                                   ?
+0x2DCB: e6         mov A, @R0                               ?
+0x2DCC: 12 24 6c   lcall 0x246c                             ?
+0x2DCF: 08         inc R0                                   ?
+0x2DD0: e6         mov A, @R0                               ?
+0x2DD1: 12 24 6c   lcall 0x246c                             ?
+0x2DD4: e5 e3      mov A, 0xe3                              ?
+0x2DD6: 12 24 6c   lcall 0x246c                             ?
+0x2DD9: e5 e4      mov A, 0xe4                              ?
+0x2DDB: 12 24 6c   lcall 0x246c                             ?
+0x2DDE: e5 e5      mov A, 0xe5                              ?
+0x2DE0: 12 24 6c   lcall 0x246c                             ?
+0x2DE3: e5 e6      mov A, 0xe6                              ?
+0x2DE5: 12 24 6c   lcall 0x246c                             ?
+0x2DE8: d2 13      setb 0x22.3 [0x13]                       ?
+0x2DEA: 22         ret                                      ?
+0x2DEB: b4 9f 03   cjne A, #0x9f, 0x007d                    ?
+0x2DEE: 02 0d 3b   ljmp 0x0d3b                              ?
+0x2DF1: b4 a0 5e   cjne A, #0xa0, 0x00de                    ?
+0x2DF4: 74 01      mov A, #0x01                             ?
+0x2DF6: 12 24 45   lcall 0x2445                             ?
+0x2DF9: 12 24 4a   lcall 0x244a                             ?
+0x2DFC: b4 01 0b   cjne A, #0x01, 0x0096                    ?
+0x2DFF: 53 3c 19   anl 0x3c, #0x19                          ?
+0x2E02: 43 3c 20   orl 0x3c, #0x20                          ?
+0x2E05: 78 30      mov R0, #0x30                            ?
+0x2E07: 76 00      mov @R0, #0x00                           ?
+0x2E09: 22         ret                                      ?
+0x2E0A: b4 02 04   cjne A, #0x02, 0x009d                    ?
+0x2E0D: 53 3c 19   anl 0x3c, #0x19                          ?
+0x2E10: 22         ret                                      ?
+0x2E11: b4 03 08   cjne A, #0x03, 0x00a8                    ?
+0x2E14: 43 3c 04   orl 0x3c, #0x04                          ?
+0x2E17: 78 30      mov R0, #0x30                            ?
+0x2E19: 76 00      mov @R0, #0x00                           ?
+0x2E1B: 22         ret                                      ?
+0x2E1C: b4 04 04   cjne A, #0x04, 0x00af                    ?
+0x2E1F: 53 3c 19   anl 0x3c, #0x19                          ?
+0x2E22: 22         ret                                      ?
+0x2E23: b4 06 2c   cjne A, #0x06, 0x00de                    ?
+0x2E26: e5 3c      mov A, 0x3c                              ?
+0x2E28: 30 e0 27   jnb 0xe0.0 [0xe0], 0x00de                ?
+0x2E2B: e5 ee      mov A, 0xee                              ?
+0x2E2D: 20 e0 fb   jb 0xe0.0 [0xe0], 0x00b7                 ?
+0x2E30: e5 ee      mov A, 0xee                              ?
+0x2E32: f5 ee      mov 0xee, A                              ?
+0x2E34: 75 ea 00   mov 0xea, #0x00                          ?
+0x2E37: 78 31      mov R0, #0x31                            ?
+0x2E39: 86 eb      mov 0xeb, @R0                            ?
+0x2E3B: 08         inc R0                                   ?
+0x2E3C: 86 ec      mov 0xec, @R0                            ?
+0x2E3E: 08         inc R0                                   ?
+0x2E3F: 86 ed      mov 0xed, @R0                            ?
+0x2E41: e5 e3      mov A, 0xe3                              ?
+0x2E43: 44 c0      orl A, #0xc0                             ?
+0x2E45: f5 e3      mov 0xe3, A                              ?
+0x2E47: e5 e4      mov A, 0xe4                              ?
+0x2E49: 54 fc      anl A, #0xfc                             ?
+0x2E4B: 44 02      orl A, #0x02                             ?
+0x2E4D: f5 e4      mov 0xe4, A                              ?
+0x2E4F: 75 f5 06   mov 0xf5, #0x06                          ?
+0x2E52: 22         ret                                      ?
+0x2E53: 53 3c 01   anl 0x3c, #0x01                          ?
+0x2E56: 12 25 f8   lcall 0x25f8                             ?
+0x2E59: 50 03      jnc 0x00ea                               ?
+0x2E5B: 43 3c 08   orl 0x3c, #0x08                          ?
+0x2E5E: 02 1f 38   ljmp 0x1f38                              ?
+0x2E61: 75 3c 00   mov 0x3c, #0x00                          ?
+0x2E64: 02 26 24   ljmp 0x2624                              ?
+0x2E67: 12 0e a9   lcall 0x0ea9                             ?
+0x2E6A: 02 2e f2   ljmp 0x2ef2                              ?
+0x2E6D: 12 1a 3a   lcall 0x1a3a                             ?
+0x2E70: 02 2e c5   ljmp 0x2ec5                              ?
+0x2E73: 85 f3 53   mov 0x53, 0xf3                           ?
+0x2E76: 53 3c fe   anl 0x3c, #0xfe                          ?
+0x2E79: 75 eb 01   mov 0xeb, #0x01                          ?
+0x2E7C: 75 ea 10   mov 0xea, #0x10                          ?
+0x2E7F: 75 f5 00   mov 0xf5, #0x00                          ?
+0x2E82: e5 f1      mov A, 0xf1                              ?
+0x2E84: b4 58 25   cjne A, #0x58, 0x0138                    ?
+0x2E87: e5 f2      mov A, 0xf2                              ?
+0x2E89: b4 42 20   cjne A, #0x42, 0x0138                    ?
+0x2E8C: e5 f3      mov A, 0xf3                              ?
+0x2E8E: b4 50 1b   cjne A, #0x50, 0x0138                    ?
+0x2E91: e5 f4      mov A, 0xf4                              ?
+0x2E93: b4 50 16   cjne A, #0x50, 0x0138                    ?
+0x2E96: 75 eb 01   mov 0xeb, #0x01                          ?
+0x2E99: 75 ea 18   mov 0xea, #0x18                          ?
+0x2E9C: 75 f5 00   mov 0xf5, #0x00                          ?
+0x2E9F: 78 31      mov R0, #0x31                            ?
+0x2EA1: a6 f3      mov @R0, 0xf3                            ?
+0x2EA3: 08         inc R0                                   ?
+0x2EA4: a6 f2      mov @R0, 0xf2                            ?
+0x2EA6: 08         inc R0                                   ?
+0x2EA7: a6 f1      mov @R0, 0xf1                            ?
+0x2EA9: 43 3c 01   orl 0x3c, #0x01                          ?
+0x2EAC: 22         ret                                      ?
+0x2EAD: 53 3c 01   anl 0x3c, #0x01                          ?
+0x2EB0: e5 ee      mov A, 0xee                              ?
+0x2EB2: 30 e0 0d   jnb 0xe0.0 [0xe0], 0x014e                ?
+0x2EB5: 75 e3 01   mov 0xe3, #0x01                          ?
+0x2EB8: 75 e3 00   mov 0xe3, #0x00                          ?
+0x2EBB: 75 e3 01   mov 0xe3, #0x01                          ?
+0x2EBE: 75 e3 00   mov 0xe3, #0x00                          ?
+0x2EC1: 22         ret                                      ?
+0x2EC2: 02 11 56   ljmp 0x1156                              ?
+0x2EC5: e5 3c      mov A, 0x3c                              ?
+0x2EC7: 30 e1 27   jnb 0xe0.1 [0xe1], 0x017d                ?
+0x2ECA: e5 ee      mov A, 0xee                              ?
+0x2ECC: 20 e0 22   jb 0xe0.0 [0xe0], 0x017d                 ?
+0x2ECF: e5 ee      mov A, 0xee                              ?
+0x2ED1: f5 ee      mov 0xee, A                              ?
+0x2ED3: 75 ea 00   mov 0xea, #0x00                          ?
+0x2ED6: 78 31      mov R0, #0x31                            ?
+0x2ED8: 86 eb      mov 0xeb, @R0                            ?
+0x2EDA: 08         inc R0                                   ?
+0x2EDB: 86 ec      mov 0xec, @R0                            ?
+0x2EDD: 08         inc R0                                   ?
+0x2EDE: 86 ed      mov 0xed, @R0                            ?
+0x2EE0: e5 e3      mov A, 0xe3                              ?
+0x2EE2: 44 c0      orl A, #0xc0                             ?
+0x2EE4: f5 e3      mov 0xe3, A                              ?
+0x2EE6: e5 e4      mov A, 0xe4                              ?
+0x2EE8: 54 fc      anl A, #0xfc                             ?
+0x2EEA: 44 02      orl A, #0x02                             ?
+0x2EEC: f5 e4      mov 0xe4, A                              ?
+0x2EEE: 75 f5 06   mov 0xf5, #0x06                          ?
+0x2EF1: 22         ret                                      ?
+0x2EF2: e5 3c      mov A, 0x3c                              ?
+0x2EF4: 20 e1 05   jb 0xe0.1 [0xe1], 0x0188                 ?
+0x2EF7: 54 24      anl A, #0x24                             ?
+0x2EF9: 70 13      jnz 0x019a                               ?
+0x2EFB: 22         ret                                      ?
+0x2EFC: 78 30      mov R0, #0x30                            ?
+0x2EFE: 06         inc @R0                                  ?
+0x2EFF: e6         mov A, @R0                               ?
+0x2F00: b4 00 14   cjne A, #0x00, 0x01a3                    ?
+0x2F03: e5 3c      mov A, 0x3c                              ?
+0x2F05: 24 40      add A, #0x40                             ?
+0x2F07: f5 3c      mov 0x3c, A                              ?
+0x2F09: 30 e7 0b   jnb 0xe0.7 [0xe7], 0x01a3                ?
+0x2F0C: 80 0a      sjmp 0x01a4                              ?
+0x2F0E: 78 30      mov R0, #0x30                            ?
+0x2F10: 06         inc @R0                                  ?
+0x2F11: e6         mov A, @R0                               ?
+0x2F12: b4 1e 02   cjne A, #0x1e, 0x01a3                    ?
+0x2F15: 80 01      sjmp 0x01a4                              ?
+0x2F17: 22         ret                                      ?
+0x2F18: 53 3c 09   anl 0x3c, #0x09                          ?
+0x2F1B: d2 14      setb 0x22.4 [0x14]                       ?
+0x2F1D: c2 15      clr 0x22.5 [0x15]                        ?
+0x2F1F: c2 16      clr 0x22.6 [0x16]                        ?
+0x2F21: 75 3d 01   mov 0x3d, #0x01                          ?
+0x2F24: 75 64 00   mov 0x64, #0x00                          ?
+0x2F27: c2 13      clr 0x22.3 [0x13]                        ?
+0x2F29: 22         ret                                      ?
+
+=== disassembly windows around hooks ===
+-- window 0x0770 --
+0x0764: 2b         add A, R3                                ?
+0x0765: 12 23 4f   lcall 0x234f                             ?
+0x0768: 12 08 0d   lcall 0x080d                             ?
+0x076B: 12 07 ea   lcall 0x07ea                             ?
+0x076E: d2 0c      setb 0x21.4 [0x0c]                       ?
+0x0770: 12 26 24   lcall 0x2624                             ?
+0x0773: 92 0a      mov 0x21.2 [0x0a], C                     ?
+0x0775: 75 81 b9   mov 0x81, #0xb9                          ?
+0x0778: 12 22 d1   lcall 0x22d1                             ?
+0x077B: 12 24 17   lcall 0x2417                             ?
+0x077E: f5 39      mov 0x39, A                              ?
+0x0780: 12 26 2a   lcall 0x262a                             ?
+0x0783: ec         mov A, R4                                ?
+0x0784: a2 e2      mov C, 0xe0.2 [0xe2]                     ?
+0x0786: 50 0e      jnc 0x0032                               ?
+-- window 0x07d4 --
+0x07C8: 12 11 9b   lcall 0x119b                             ?
+0x07CB: 12 10 72   lcall 0x1072                             ?
+0x07CE: 12 12 d5   lcall 0x12d5                             ?
+0x07D1: 12 11 27   lcall 0x1127                             ?
+0x07D4: 12 0e a9   lcall 0x0ea9                             ?
+0x07D7: 12 1a 3a   lcall 0x1a3a                             ?
+0x07DA: 12 22 c2   lcall 0x22c2                             ?
+0x07DD: 12 1d d7   lcall 0x1dd7                             ?
+0x07E0: 12 19 f3   lcall 0x19f3                             ?
+0x07E3: 12 23 38   lcall 0x2338                             ?
+0x07E6: 50 ef      jnc 0x000f                               ?
+0x07E8: 80 8b      sjmp 0xffffffad                          ?
+0x07EA: 78 7e      mov R0, #0x7e                            ?
+-- window 0x0b73 --
+0x0B67: 10 d2 14   jbc 0xd0.2 [0xd2], 0x0017                ?
+0x0B6A: ed         mov A, R5                                ?
+0x0B6B: a2 e0      mov C, 0xe0.0 [0xe0]                     ?
+0x0B6D: 92 15      mov 0x22.5 [0x15], C                     ?
+0x0B6F: a2 e1      mov C, 0xe0.1 [0xe1]                     ?
+0x0B71: 92 16      mov 0x22.6 [0x16], C                     ?
+0x0B73: 75 3d 01   mov 0x3d, #0x01                          ?
+0x0B76: 80 1b      sjmp 0x002c                              ?
+0x0B78: bb 30 07   cjne R3, #0x30, 0x001b                   ?
+0x0B7B: d2 03      setb 0x20.3 [0x03]                       ?
+0x0B7D: 75 3d 00   mov 0x3d, #0x00                          ?
+0x0B80: 80 11      sjmp 0x002c                              ?
+0x0B82: bb 33 0c   cjne R3, #0x33, 0x002a                   ?
+0x0B85: c2 14      clr 0x22.4 [0x14]                        ?
+0x0B87: c2 08      clr 0x21.0 [0x08]                        ?
+0x0B89: c2 20      clr 0x24.0 [0x20]                        ?
+-- window 0x0ae3 --
+0x0AD7: 02 0b 98   ljmp 0x0b98                              ?
+0x0ADA: b4 9b 03   cjne A, #0x9b, 0x0009                    ?
+0x0ADD: 02 0b bb   ljmp 0x0bbb                              ?
+0x0AE0: b4 88 03   cjne A, #0x88, 0x000f                    ?
+0x0AE3: 02 0b f4   ljmp 0x0bf4                              ?
+0x0AE6: b4 89 03   cjne A, #0x89, 0x0015                    ?
+0x0AE9: 02 0c 0b   ljmp 0x0c0b                              ?
+0x0AEC: b4 94 03   cjne A, #0x94, 0x001b                    ?
+0x0AEF: 02 0c 16   ljmp 0x0c16                              ?
+0x0AF2: b4 8b 03   cjne A, #0x8b, 0x0021                    ?
+0x0AF5: 02 0c 21   ljmp 0x0c21                              ?
+0x0AF8: b4 98 03   cjne A, #0x98, 0x0027                    ?
+-- window 0x08c2 --
+0x08B6: 24 6c      add A, #0x6c                             ?
+0x08B8: e5 f0      mov A, 0xf0                              ?
+0x08BA: 12 24 6c   lcall 0x246c                             ?
+0x08BD: e5 3e      mov A, 0x3e                              ?
+0x08BF: 12 24 6c   lcall 0x246c                             ?
+0x08C2: d2 13      setb 0x22.3 [0x13]                       ?
+0x08C4: 22         ret                                      ?
+0x08C5: 12 26 2a   lcall 0x262a                             ?
+0x08C8: 75 f0 00   mov 0xf0, #0x00                          ?
+0x08CB: a2 07      mov C, 0x20.7 [0x07]                     ?
+0x08CD: 92 f0      mov 0xf0.0 [0xf0], C                     ?
+0x08CF: a2 58      mov C, 0x2b.0 [0x58]                     ?
+0x08D1: 92 f1      mov 0xf0.1 [0xf1], C                     ?
+0x08D3: 74 01      mov A, #0x01                             ?
+0x08D5: 12 24 67   lcall 0x2467                             ?
+0x08D8: ea         mov A, R2                                ?
+0x08D9: 12 00 00   lcall 0x0000                             ?
+-- window 0x0b2e --
+0x0B22: b4 9c 03   cjne A, #0x9c, 0x0006                    ?
+0x0B25: 02 0d 1c   ljmp 0x0d1c                              ?
+0x0B28: b4 9d 03   cjne A, #0x9d, 0x000c                    ?
+0x0B2B: 02 0d 2e   ljmp 0x0d2e                              ?
+0x0B2E: b4 9f 03   cjne A, #0x9f, 0x0012                    ?
+0x0B31: 02 0d 3b   ljmp 0x0d3b                              ?
+0x0B34: 22         ret                                      ?
+0x0B35: 74 01      mov A, #0x01                             ?
+0x0B37: 12 24 45   lcall 0x2445                             ?
+0x0B3A: 12 24 4a   lcall 0x244a                             ?
+0x0B3D: fa         mov R2, A                                ?
+0x0B3E: 12 24 4a   lcall 0x244a                             ?
+0x0B41: fb         mov R3, A                                ?
+0x0B42: 12 24 4a   lcall 0x244a                             ?
+0x0B45: fc         mov R4, A                                ?
+-- window 0x25e0 --
+0x25D4: 75 ea 2c   mov 0xea, #0x2c                          ?
+0x25D7: 75 f5 00   mov 0xf5, #0x00                          ?
+0x25DA: 85 f1 51   mov 0x51, 0xf1                           ?
+0x25DD: 85 f2 52   mov 0x52, 0xf2                           ?
+0x25E0: 85 f3 53   mov 0x53, 0xf3                           ?
+0x25E3: 22         ret                                      ?
+0x25E4: c2 cc      clr 0xc8.4 [0xcc]                        ?
+0x25E6: 22         ret                                      ?
+0x25E7: d2 cc      setb 0xc8.4 [0xcc]                       ?
+0x25E9: 22         ret                                      ?
+0x25EA: f5 91      mov 0x91, A                              ?
+0x25EC: 22         ret                                      ?
+0x25ED: f5 93      mov 0x93, A                              ?
+0x25EF: 22         ret                                      ?
+0x25F0: a2 a7      mov C, 0xa0.7 [0xa7]                     ?
+0x25F2: b3         cpl C                                    ?
+0x25F3: 22         ret                                      ?
+0x25F4: a2 90      mov C, 0x90.0 [0x90]                     ?
+0x25F6: b3         cpl C                                    ?
+0x25F7: 22         ret                                      ?
+-- window 0x1e9f --
+0x1E93: 75 62 81   mov 0x62, #0x81                          ?
+0x1E96: d2 47      setb 0x28.7 [0x47]                       ?
+0x1E98: d2 48      setb 0x29.0 [0x48]                       ?
+0x1E9A: 20 1c 05   jb 0x23.4 [0x1c], 0x000f                 ?
+0x1E9D: d2 0d      setb 0x21.5 [0x0d]                       ?
+0x1E9F: 02 1f 38   ljmp 0x1f38                              ?
+0x1EA2: 02 20 2d   ljmp 0x202d                              ?
+0x1EA5: 20 10 2b   jb 0x22.0 [0x10], 0x0040                 ?
+0x1EA8: 12 08 0d   lcall 0x080d                             ?
+0x1EAB: d2 0c      setb 0x21.4 [0x0c]                       ?
+0x1EAD: 02 1f 2e   ljmp 0x1f2e                              ?
+0x1EB0: 20 0c 20   jb 0x21.4 [0x0c], 0x0040                 ?
+0x1EB3: 80 7e      sjmp 0x00a0                              ?
+0x1EB5: 75 3b 00   mov 0x3b, #0x00                          ?
+-- window 0x11ac --
+0x11A0: 76 00      mov @R0, #0x00                           ?
+0x11A2: 22         ret                                      ?
+0x11A3: 78 9b      mov R0, #0x9b                            ?
+0x11A5: e6         mov A, @R0                               ?
+0x11A6: 26         add A, @R0                               ?
+0x11A7: 26         add A, @R0                               ?
+0x11A8: 90 11 ac   mov DPTR, #0x11ac                        ?
+0x11AB: 73         jmp @A+DPTR                              ?
+0x11AC: 02 11 56   ljmp 0x1156                              ?
+0x11AF: 02 11 7c   ljmp 0x117c                              ?
+0x11B2: 02 11 8f   ljmp 0x118f                              ?
+0x11B5: 02 11 99   ljmp 0x1199                              ?
+0x11B8: c2 1e      clr 0x23.6 [0x1e]                        ?
+0x11BA: 20 14 0a   jb 0x22.4 [0x14], 0x0027                 ?
+0x11BD: c2 29      clr 0x25.1 [0x29]                        ?
+0x11BF: 12 24 7f   lcall 0x247f                             ?
+0x11C2: 12 00 00   lcall 0x0000                             ?
+-- window 0x07c2 --
+0x07B6: 12 1b d9   lcall 0x1bd9                             ?
+0x07B9: 12 22 36   lcall 0x2236                             ?
+0x07BC: 12 20 44   lcall 0x2044                             ?
+0x07BF: 12 14 c6   lcall 0x14c6                             ?
+0x07C2: 12 14 08   lcall 0x1408                             ?
+0x07C5: 12 1d e9   lcall 0x1de9                             ?
+0x07C8: 12 11 9b   lcall 0x119b                             ?
+0x07CB: 12 10 72   lcall 0x1072                             ?
+0x07CE: 12 12 d5   lcall 0x12d5                             ?
+0x07D1: 12 11 27   lcall 0x1127                             ?
+0x07D4: 12 0e a9   lcall 0x0ea9                             ?
+0x07D7: 12 1a 3a   lcall 0x1a3a                             ?
+-- window 0x082b --
+0x081F: 12 2d 5d   lcall 0x2d5d                             ?
+0x0822: 75 54 10   mov 0x54, #0x10                          ?
+0x0825: 75 55 fa   mov 0x55, #0xfa                          ?
+0x0828: 75 47 19   mov 0x47, #0x19                          ?
+0x082B: 75 3c 80   mov 0x3c, #0x80                          ?
+0x082E: 75 62 00   mov 0x62, #0x00                          ?
+0x0831: d2 25      setb 0x24.5 [0x25]                       ?
+0x0833: d2 1f      setb 0x23.7 [0x1f]                       ?
+0x0835: e5 2f      mov A, 0x2f                              ?
+0x0837: 54 20      anl A, #0x20                             ?
+0x0839: 44 5c      orl A, #0x5c                             ?
+0x083B: f5 2f      mov 0x2f, A                              ?
+0x083D: 22         ret                                      ?
+0x083E: 12 24 39   lcall 0x2439                             ?
+0x0841: 50 03      jnc 0x0027                               ?
+-- window 0x0814 --
+0x0808: 2f         add A, R7                                ?
+0x0809: 5c         anl A, R4                                ?
+0x080A: d2 00      setb 0x20.0 [0x00]                       ?
+0x080C: 22         ret                                      ?
+0x080D: 78 9b      mov R0, #0x9b                            ?
+0x080F: 7a 1f      mov R2, #0x1f                            ?
+0x0811: 12 2d 4c   lcall 0x2d4c                             ?
+0x0814: 78 35      mov R0, #0x35                            ?
+0x0816: 7a 34      mov R2, #0x34                            ?
+0x0818: 12 2d 4c   lcall 0x2d4c                             ?
+0x081B: 78 08      mov R0, #0x08                            ?
+0x081D: 7a 53      mov R2, #0x53                            ?
+0x081F: 12 2d 5d   lcall 0x2d5d                             ?
+0x0822: 75 54 10   mov 0x54, #0x10                          ?
+0x0825: 75 55 fa   mov 0x55, #0xfa                          ?
+0x0828: 75 47 19   mov 0x47, #0x19                          ?
+0x082B: 75 00 00   mov 0x00, #0x00                          ?

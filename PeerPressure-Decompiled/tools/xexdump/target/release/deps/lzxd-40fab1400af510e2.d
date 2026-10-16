@@ -1,0 +1,11 @@
+/workspaces/Xbox360PeerPressure-corona-suport/PeerPressure-Decompiled/tools/xexdump/target/release/deps/lzxd-40fab1400af510e2.d: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/bitstream.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/block.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/tree.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/window.rs
+
+/workspaces/Xbox360PeerPressure-corona-suport/PeerPressure-Decompiled/tools/xexdump/target/release/deps/liblzxd-40fab1400af510e2.rlib: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/bitstream.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/block.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/tree.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/window.rs
+
+/workspaces/Xbox360PeerPressure-corona-suport/PeerPressure-Decompiled/tools/xexdump/target/release/deps/liblzxd-40fab1400af510e2.rmeta: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/bitstream.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/block.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/tree.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/window.rs
+
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/lib.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/bitstream.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/block.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/tree.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/lzxd-0.2.7/src/window.rs:

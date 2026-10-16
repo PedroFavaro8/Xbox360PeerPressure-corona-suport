@@ -1,0 +1,11 @@
+/workspaces/Xbox360PeerPressure-corona-suport/PeerPressure-Decompiled/tools/xexdump/target/release/deps/inout-878b6f7194011be6.d: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/errors.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout_buf.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/reserved.rs
+
+/workspaces/Xbox360PeerPressure-corona-suport/PeerPressure-Decompiled/tools/xexdump/target/release/deps/libinout-878b6f7194011be6.rlib: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/errors.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout_buf.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/reserved.rs
+
+/workspaces/Xbox360PeerPressure-corona-suport/PeerPressure-Decompiled/tools/xexdump/target/release/deps/libinout-878b6f7194011be6.rmeta: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/errors.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout_buf.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/reserved.rs
+
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/lib.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/errors.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/inout_buf.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/inout-0.2.3/src/reserved.rs:

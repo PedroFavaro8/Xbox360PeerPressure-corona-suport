@@ -1,0 +1,33 @@
+[package]
+name = "xex2"
+version.workspace = true
+edition = "2024"
+license = "MIT OR Apache-2.0"
+license-file = "../LICENSE"
+repository = "https://github.com/landaire/acceleration"
+authors = ["Lander Brandt <landerbrandt@gmail.com>"]
+readme = "README.md"
+description = "Parser and extractor for Xbox 360 XEX2 executables"
+keywords = ["xbox360", "xex", "xbox", "parser"]
+categories = ["parser-implementations"]
+include = ["src/**", "README.md"]
+
+[dependencies]
+byteorder = { workspace = true }
+serde = { workspace = true, optional = true }
+bitflags = { workspace = true }
+sha-1 = { workspace = true }
+num_enum = { workspace = true }
+lzxd = "0.2"
+lzxc = { version = "0.2", path = "../lzxc" }
+rootcause = "0.12"
+xecrypt = { version = "0.2", path = "../xecrypt" }
+xenon_types = { version = "0.2", path = "../xenon_types" }
+jiff = { workspace = true, optional = true }
+
+[dev-dependencies]
+insta = { workspace = true }
+
+[features]
+serde = ["dep:serde"]
+jiff = ["dep:jiff", "xenon_types/jiff"]

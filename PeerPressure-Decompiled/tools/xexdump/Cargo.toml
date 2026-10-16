@@ -1,0 +1,11 @@
+[package]
+name = "xexdump"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# NOTE: vendorizado para corrigir a selecao de chave (bloco unico)
+xex2 = { path = "xex2" }
+
+[profile.release]
+opt-level = 2
