@@ -29,8 +29,8 @@ The peer pressure exploit does not work on all console revisions, specifically t
 | Falcon | ✔ |
 | Jasper | ✔ |
 | Trinity | ✔ |
-| Corona | ❌ Southbridge has a hardware level fix for the exploit. |
-| Winchester | ❌ Southbridge has a hardware level fix for the exploit. |
+| Corona |  ✔  |
+| Winchester | ❌ Southbridge (i dont think so that is southbridge, because i see smc exploit on the code and you can see the smc exploits in softmoddata.zip on the compilation)  has a hardware level fix for the exploit. |
 
 ## HDD/SSD Compatibility
 To use this exploit you will need a hard drive, it doesn't need to be an official Xbox 360 hard drive, or even formatted, you just need **any** mechanical 2.5" HDD that can be connected to the console. The exploit works by attacking a race condition that exists when reading the security sectors off the HDD. Due to this being timing critical most SSDs will likely not work with the exploit as they respond to read requests faster than the race condition can be exploited. 
