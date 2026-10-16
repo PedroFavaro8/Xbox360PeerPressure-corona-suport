@@ -1,4 +1,9 @@
 # Peer Pressure Softmod For Xbox 360
+
+
+**first, this project is original of grimdommer, this is a fork**
+
+
 Peer Pressure is a persistent softmod exploit for Xbox 360. It works by making some modifications to the console NAND image and HDD security sectors to trigger a series of DMA attacks during startup which ultimately allow you to run unsigned code. Here's some of the features that Peer Pressure provides, for a complete list see [Softmod Features](../../wiki/Softmod-Features):
 - Removes all code signing restrictions on executables files allowing you to run homebrew applications.
 - Removes licensing and security checks for games, downloadable content, arcade games, indie games, etc.
@@ -30,7 +35,7 @@ The peer pressure exploit does not work on all console revisions, specifically t
 | Jasper | ✔ |
 | Trinity | ✔ |
 | Corona |  ✔  |
-| Winchester | ❌ Southbridge (i dont think so that is southbridge, because i see smc exploit on the code and you can see the smc exploits in softmoddata.zip on the compilation)  has a hardware level fix for the exploit. |
+| Winchester | ❌ Southbridge  has a hardware level fix for the exploit. |
 
 ## HDD/SSD Compatibility
 To use this exploit you will need a hard drive, it doesn't need to be an official Xbox 360 hard drive, or even formatted, you just need **any** mechanical 2.5" HDD that can be connected to the console. The exploit works by attacking a race condition that exists when reading the security sectors off the HDD. Due to this being timing critical most SSDs will likely not work with the exploit as they respond to read requests faster than the race condition can be exploited. 
@@ -59,11 +64,13 @@ When I decided to make Peer Pressure **I wanted a clean slate to make my own thi
 For some of the features people currently use dashlaunch plugins for (xbdm, HID controller support, etc.) I would like to add these as mainline features in the future. However, this all depends on time and motivation. For a list of features that are currently planned for the next release see [Feature Requests/Roadmap](../../issues/1).
 
 # Where's the Source Code?
-I have decided not to release the source code for this for a few reasons:
+i've make reverse engenery on this because i only have corona consoles and i expect that I hope I don’t upset Grimmdommer but I only have Corona consoles and I went poking around the project and there’s an SMC, an SMC file for Corona there, so basically it was decompiling, adding the file into the chain, and recompiling. But if you have a Trinity console, use the official version, not mine, because my version... I know Grimmdommer wants to make his own, and I think I plan to remove the code in a future update, and there is the original part made by grimmdommer:
+
+"I have decided not to release the source code for this for a few reasons:
 1. Everything I make and release I do for free in my own time. This is a hobby for me and something I do for fun. Given the state of software development I no longer feel the need to release the source code for everything I make just so people can make a million forks of it and kill any motivation I have to work on it. **I make this stuff for myself and not anyone else.**
 2. The world doesn't need 15 "slopsoftmods". It took a LOT of work to not only develop this exploit chain but also package it into an easy to use installer and do testing to try and make sure it wouldn't break someone's console. Making these modifications to your console can cause it to stop working, and I don't see why someone who doesn't understand the risks, work it took to make, or how the OS functions, should be able to clone a turn-key repository, make one change, slap their name on it, and tell people "go download my softmod".
 
-It's inevitable that people will just reverse engineer, modify, and repackage my work as their own. While my work may not be "perfect, bug free, etc.", I have taken utmost care to make sure it's unlikely to cause any harm to your console and that you should always be able to boot into retail mode to recover from anything that goes wrong. Other people copying my work may not do the same. If you don't trust the people making the modifications don't install them.
+It's inevitable that people will just reverse engineer, modify, and repackage my work as their own. While my work may not be "perfect, bug free, etc.", I have taken utmost care to make sure it's unlikely to cause any harm to your console and that you should always be able to boot into retail mode to recover from anything that goes wrong. Other people copying my work may not do the same. If you don't trust the people making the modifications don't install them."
 
 # Credits
 I wanna give a big thanks to ihatecompvir and InvoxiPlayGames for the Rock Band Blitz entry point, and Máté for the stage 3 improvements that made this all possible.
