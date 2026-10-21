@@ -35,6 +35,8 @@ SRC = os.path.join(ROOT, "build", "sources")
 CBUILD = os.path.join(ROOT, "build", "c")
 WORK = "/tmp/opencode/reasm"
 
+PPC_LANG = "PowerPC:BE:64:A2-32addr"
+
 PPC_PAYLOADS = [
     "BadUpdateExploit-2ndStage.bin", "BadUpdateExploit-3rdStage.bin",
     "BadUpdateExploit-4thStage.bin", "BadUpdateExploit-Data.bin",
@@ -105,8 +107,8 @@ def cmd_c(_):
         sys.exit("set GHIDRA_HOME to a Ghidra install (has support/analyzeHeadless)")
     os.makedirs(CBUILD, exist_ok=True)
     script = os.path.join(HERE, "ghidra")
-    jobs = [(p, "PowerPC:BE:32:default", "DecompilePPC.java") for p in xex_inputs()]
-    jobs += [(p, "PowerPC:BE:32:default", "DecompilePPC.java") for p in ppc_inputs()]
+    jobs = [(p, PPC_LANG, "DecompilePPC.java") for p in xex_inputs()]
+    jobs += [(p, PPC_LANG, "DecompilePPC.java") for p in ppc_inputs()]
     for src, proc, scriptj in jobs:
         name = os.path.basename(src)
         out = os.path.join(CBUILD, name + ".c")

@@ -26,7 +26,7 @@ To use the Peer Pressure softmod you'll need the following:
 - USB stick.
 
 ## Console Compatibility
-The peer pressure exploit does not work on all console revisions, specifically the corona and winchester models cannot be used. The following table shows which console revisions are supported by the exploit:
+The exploit supports Corona consoles in this fork. Winchester consoles are not supported because their southbridge has a hardware-level fix for the exploit. The following table shows which console revisions are supported:
 | Motherboard Revision | Supported |
 | -------------------- | --------- |
 | Xenon | ✔ |

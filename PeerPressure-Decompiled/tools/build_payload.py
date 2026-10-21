@@ -85,11 +85,18 @@ def main() -> int:
             shutil.copytree(item, dst, dirs_exist_ok=True)
         else:
             shutil.copy2(item, dst)
-    # drop in the freshly built loose XEX too (default.xex, bootanim.xex)
+    # drop in the freshly built loose XEX too (default.xex, bootanim.xex).
+    # Refresh the decoded .pe only for XEX we deliberately patched, so the
+    # shipped .xex/.pe pair stays consistent without touching unrelated files.
     for loose in ("default.xex", "bootanim.xex"):
         built = xex_dir / loose
-        if built.exists():
-            shutil.copy2(built, payload_out / loose)
+        if not built.exists():
+            continue
+        shutil.copy2(built, payload_out / loose)
+        patched_pe = ROOT / "patches" / (loose + ".pe")
+        built_pe = xex_dir / (loose + ".pe")
+        if patched_pe.exists() and built_pe.exists():
+            shutil.copy2(built_pe, payload_out / (loose + ".pe"))
     print(f"payload staged -> {payload_out}")
     return 0
 
